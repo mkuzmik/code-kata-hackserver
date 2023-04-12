@@ -11,4 +11,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD ["gunicorn", "-w", "1", "-t", "20", "-b", "0.0.0.0:5000", "main:app"]
+CMD ["gunicorn", "-w", "1", "--threads", "10", "-b", "0.0.0.0:5000", "main:app"]
