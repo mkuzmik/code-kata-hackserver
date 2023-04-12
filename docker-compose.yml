@@ -1,0 +1,6 @@
+services:
+  server-1:
+    container_name: app-instance-1
+    build: app
+    ports:
+      - "8080:5000"
